@@ -1,0 +1,27 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import os
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
+class Handler:
+    def onDestroy(self, *args):
+        Gtk.main_quit()
+    def e2g_start(self, button):
+        os.system("service e2guardian start")
+    def e2g_stop(self, button):
+        os.system("service e2guardian stop")
+    def e2g_reload(self, button):
+        os.system("service e2guardian reload")
+
+gladefile = "./e2gcp.glade"
+builder = Gtk.Builder()
+builder.add_from_file(gladefile)
+builder.connect_signals(Handler())
+
+window = builder.get_object("window")
+window.show_all()
+
+
+Gtk.main()

@@ -22,12 +22,15 @@ class Handler:
     def launch_squid_cp(self, button):
         print("Not Yet Implemented")
 
-gladefile = "./e2gcp.glade"
+#get glade file
+gladefile = os.path.split(__file__)[0] + '/e2gcp.glade'
+
+#builds GUI for app
 builder = Gtk.Builder()
 builder.add_from_file(gladefile)
 builder.connect_signals(Handler())
 
-window = builder.get_object("window")
+window = builder.get_object("e2gcp")
 window.show_all()
 
 

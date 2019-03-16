@@ -1,10 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
+#needed to allow access to cli tools for E2guardian
 import os
+
+#imports Glade GTK library
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
+#defines Handlers
 class Handler:
     def onDestroy(self, *args):
         Gtk.main_quit()
@@ -14,6 +19,8 @@ class Handler:
         os.system("service e2guardian stop")
     def e2g_reload(self, button):
         os.system("service e2guardian reload")
+    def launch_squid_cp(self, button):
+        print("Not Yet Implemented")
 
 gladefile = "./e2gcp.glade"
 builder = Gtk.Builder()

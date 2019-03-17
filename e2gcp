@@ -15,12 +15,19 @@ class Handler:
         Gtk.main_quit()
     def e2g_start(self, button):
         os.system("service e2guardian start")
+        start = builder.get_object("start")
+        start.set_text("Started")
     def e2g_stop(self, button):
         os.system("service e2guardian stop")
+        stop = builder.get_object("stop")
+        stop.set_text("Stopped")
     def e2g_reload(self, button):
         os.system("service e2guardian reload")
+        reloader = builder.get_object("reload")
+        reloader.set_text("Reloaded")
     def launch_squid_cp(self, button):
-        print("Not Yet Implemented")
+        squid = builder.get_object("squid")
+        squid.set_text("Not Yet Implemented")
 
 #get glade file
 gladefile = os.path.split(__file__)[0] + '/e2gcp.glade'

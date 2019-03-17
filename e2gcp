@@ -26,9 +26,7 @@ class Handler:
         reloader = builder.get_object("reload")
         reloader.set_text("Reloaded")
     def launch_squid_cp(self, button):
-        squid = builder.get_object("squid")
-        squid.set_text("Not Yet Implemented")
-
+        os.system("squidcp")
 #get glade file
 gladefile = os.path.split(__file__)[0] + '/e2gcp.glade'
 

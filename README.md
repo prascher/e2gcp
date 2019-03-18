@@ -3,5 +3,5 @@
 <h2>see the <a href="https://github.com/prascher/squid_controls#squid_controls">Squid Controls</a></h2>
 Coming Soon
 
-    the ablitity to monitor the status of your squid server
+    the ablitity to monitor the status of your e2guardian server
     an auto reset feature to reset the labels

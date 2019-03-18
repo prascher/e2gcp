@@ -8,4 +8,3 @@ Exec=/usr/local/bin/e2gcp
 Name=E2guardian Control Panel
 Comment=control panel for E2guardian
 Icon=/usr/local/bin/e2gcp.png
-Name[en_US]=e2gcp.desktop

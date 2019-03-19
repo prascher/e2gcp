@@ -7,4 +7,4 @@ Terminal=false
 Exec=/usr/local/bin/e2gcp
 Name=E2guardian Control Panel
 Comment=control panel for E2guardian
-Icon=/usr/local/bin/e2gcp.png
+Icon=/usr/share/icons/e2gcp.png

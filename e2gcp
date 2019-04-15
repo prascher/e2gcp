@@ -27,6 +27,8 @@ class Handler:
         reloader.set_text("Reloaded")
     def edit_domains(self, button):
         os.system("gedit /etc/e2guardian/lists/blacklists/whitelist/domains")
+    def edit_urls(self, button):
+        os.system("gedit /etc/e2guardian/lists/blacklists/whitelist/urls")
     def launch_squid_cp(self, button):
         os.system("squidcp")
 #get glade file
